@@ -1,5 +1,5 @@
 {
-    "ngrokAuthToken": "2XbKK62BPOCOareJOTPoaOOJTL1_5mLC4VtiFZTrpcheWseNF",
-    "ngrokDomain": "sweet-starfish-infinite.ngrok-free.app",
+    "ngrokAuthToken": "YOUR_TOKEN_NGROK",
+    "ngrokDomain": "YOUR_DOMAIN_NGROK",
     "port": "8080"
 }
