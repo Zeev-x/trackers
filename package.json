@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ngrok/ngrok": "^1.2.0",
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
+    "ngrok": "^5.0.0-beta.2",
     "socket.io": "^4.7.5"
   }
 }
